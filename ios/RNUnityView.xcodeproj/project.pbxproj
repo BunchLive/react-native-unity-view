@@ -10,6 +10,7 @@
 		1B593B7D2052A50D00CBB34F /* RNUnityViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B593B772052A50C00CBB34F /* RNUnityViewManager.m */; };
 		1B593B7E2052A50D00CBB34F /* UnityUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B593B792052A50C00CBB34F /* UnityUtils.mm */; };
 		1B593B7F2052A50D00CBB34F /* RNUnityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B593B7A2052A50C00CBB34F /* RNUnityView.m */; };
+		DCDFDFBA215B447100DC54B3 /* RNUnityViewEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDFDFB9215B447100DC54B3 /* RNUnityViewEmitter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		1B593B7A2052A50C00CBB34F /* RNUnityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUnityView.m; sourceTree = "<group>"; };
 		1B593B7B2052A50D00CBB34F /* RNUnityViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNUnityViewManager.h; sourceTree = "<group>"; };
 		1B593B7C2052A50D00CBB34F /* UnityUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityUtils.h; sourceTree = "<group>"; };
+		DCDFDFB8215B447100DC54B3 /* RNUnityViewEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNUnityViewEmitter.h; sourceTree = "<group>"; };
+		DCDFDFB9215B447100DC54B3 /* RNUnityViewEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUnityViewEmitter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,8 @@
 		1B593B562052A47600CBB34F = {
 			isa = PBXGroup;
 			children = (
+				DCDFDFB8215B447100DC54B3 /* RNUnityViewEmitter.h */,
+				DCDFDFB9215B447100DC54B3 /* RNUnityViewEmitter.m */,
 				1B593B782052A50C00CBB34F /* RNUnityView.h */,
 				1B593B7A2052A50C00CBB34F /* RNUnityView.m */,
 				1B593B7B2052A50D00CBB34F /* RNUnityViewManager.h */,
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B593B7D2052A50D00CBB34F /* RNUnityViewManager.m in Sources */,
+				DCDFDFBA215B447100DC54B3 /* RNUnityViewEmitter.m in Sources */,
 				1B593B7F2052A50D00CBB34F /* RNUnityView.m in Sources */,
 				1B593B7E2052A50D00CBB34F /* UnityUtils.mm in Sources */,
 			);
