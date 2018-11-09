@@ -10,6 +10,7 @@
 #import <React/RCTBridgeModule.h>
 #import "RNUnityViewEmitter.h"
 #import "UnityUtils.h"
+#import "RNUnityControlManager.h"
 
 @implementation RNUnityViewEmitter
 
@@ -36,6 +37,12 @@ RCT_EXPORT_METHOD(disableListener) {
   
   self.enabled = false;
   [UnityUtils removeUnityEventListener:self];
+}
+
+RCT_EXPORT_METHOD(startUnity) {
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [[RNUnityControlManager sharedInstance].unityDelegate createUnity];
+  });
 }
 
 @end
