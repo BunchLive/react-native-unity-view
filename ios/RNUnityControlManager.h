@@ -20,7 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RNUnityControlManager : NSObject
 
+@property (nonatomic) BOOL unityCreated;
+
 + (RNUnityControlManager *)sharedInstance;
+
+- (void)createUnity;
 
 @property (nonatomic, strong) id<UnityInitDelegate> unityDelegate;
 

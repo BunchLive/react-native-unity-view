@@ -19,4 +19,12 @@
   return instance;
 }
 
+- (void)createUnity {
+  if (self.unityCreated) {
+    return;
+  }
+  self.unityCreated = YES;
+  [self.unityDelegate createUnity];
+}
+
 @end

@@ -41,7 +41,7 @@ RCT_EXPORT_METHOD(disableListener) {
 
 RCT_EXPORT_METHOD(startUnity) {
   dispatch_async(dispatch_get_main_queue(), ^{
-    [[RNUnityControlManager sharedInstance].unityDelegate createUnity];
+    [[RNUnityControlManager sharedInstance] createUnity];
   });
 }
 
