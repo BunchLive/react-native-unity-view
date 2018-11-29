@@ -73,6 +73,9 @@ RCT_EXPORT_VIEW_PROPERTY(onMessage, RCTDirectEventBlock)
 - (void)setBridge:(RCTBridge *)bridge {
   _bridge = bridge;
   [RNUnityControlManager sharedInstance].unityDelegate = self;
+  if (!UnityIsInited()) {
+    InitUnity();
+  }
 }
 
 RCT_EXPORT_METHOD(postMessage:(nonnull NSNumber *)reactTag gameObject:(NSString *)gameObject methodName:(NSString *)methodName message:(NSString *)message)
@@ -95,16 +98,13 @@ RCT_EXPORT_METHOD(resume:(nonnull NSNumber *)reactTag)
 - (void)destroyUnity {}
 
 - (void)createUnity {
-  if (!UnityIsInited()) {
-    InitUnity();
-    UIApplication* application = [UIApplication sharedApplication];
-    UnityAppController *controller = GetAppController();
-    UIWindow* mainWindow = application.keyWindow;
-    [controller application:application didFinishLaunchingWithOptions:_bridge.launchOptions];
-    [controller startUnity:application];
-    [mainWindow makeKeyAndVisible];
-    [RNUnityViewManager listenAppState];
-  }
+  UIApplication* application = [UIApplication sharedApplication];
+  UnityAppController *controller = GetAppController();
+  UIWindow* mainWindow = application.keyWindow;
+  [controller application:application didFinishLaunchingWithOptions:_bridge.launchOptions];
+  [controller startUnity:application];
+  [mainWindow makeKeyAndVisible];
+  [RNUnityViewManager listenAppState];
 }
 
 @end
